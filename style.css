@@ -1,0 +1,142 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-container: hsla(178, 100%, 50%, 0.5);
+    --dark-blue-main: hsl(217, 54%, 11%);
+    --dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-blue-main);
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.container {
+    height: 550px;
+    width: 330px;
+    border-radius: 15px;
+    background-color: var(--dark-blue-card);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+} 
+.container .e-container {
+    width: 280px;
+    height: 280px;
+    margin-top: 25px;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container .e-container:hover {
+    cursor: pointer;
+    background-image: linear-gradient(var(--cyan-container), var(--cyan-container)), url(./images/image-equilibrium.jpg);
+}
+.container .e-container .icon-view {
+    visibility: hidden;
+}
+.container .e-container:hover .icon-view{
+    visibility: visible;
+}
+.container a {
+    color: var(--white);
+}
+.container a:hover {
+    color: var(--cyan);
+    transition: ease-in-out 0.5s;
+}
+.container .description {
+    width: 280px;
+    text-align: start;
+}
+.container .description h1 {
+    margin-top:20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.container .description p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--soft-blue);
+}
+.container .description.at{
+    display: flex;
+    justify-content: space-between;
+}
+.container .description .amount{
+    color: var(--cyan);
+    font-weight: 400;
+}
+.container .description .amount::before{
+    content: url(./images/icon-ethereum.svg); 
+}
+.container .description .time-left::before{
+    content: url(./images/icon-clock.svg); 
+}
+::before {
+    margin-right: 10px;  
+    position: relative;
+    top: 2px;
+}
+.container hr {
+    margin-top: 10px;
+    width: 280px;
+    height: 2px;
+    background-color: var(--dark-blue-line);
+}
+.container .creator{
+    margin-top: 15px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.container .creator img{
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+}
+.container .creator p{
+    color: var(--soft-blue);
+}
+.container .creator p, .container .creator p a{
+    font-weight: 400;
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
